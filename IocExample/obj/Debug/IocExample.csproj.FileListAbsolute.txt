@@ -1,0 +1,9 @@
+C:\Users\сергей\Downloads\Task.IoC\IocExample\bin\Debug\IocExample.exe.config
+C:\Users\сергей\Downloads\Task.IoC\IocExample\bin\Debug\IocExample.exe
+C:\Users\сергей\Downloads\Task.IoC\IocExample\bin\Debug\IocExample.pdb
+C:\Users\сергей\Downloads\Task.IoC\IocExample\bin\Debug\Ninject.dll
+C:\Users\сергей\Downloads\Task.IoC\IocExample\bin\Debug\Ninject.xml
+C:\Users\сергей\Downloads\Task.IoC\IocExample\obj\Debug\IocExample.csprojResolveAssemblyReference.cache
+C:\Users\сергей\Downloads\Task.IoC\IocExample\obj\Debug\IocExample.csproj.CoreCompileInputs.cache
+C:\Users\сергей\Downloads\Task.IoC\IocExample\obj\Debug\IocExample.exe
+C:\Users\сергей\Downloads\Task.IoC\IocExample\obj\Debug\IocExample.pdb

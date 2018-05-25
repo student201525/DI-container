@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -19,12 +19,11 @@ namespace IocExampleNewCLass
     {
 
         Dictionary<Type, object> objects = new Dictionary<Type, object>();
-
-        public void AddObject(Type t, object o)
-        {
-            objects.Add(t,o);
-        }
-
+        Dictionary<Type, Type> types = new Dictionary<Type, Type>();
+        //public void AddObject(Type t, object o)
+        //{
+        //    objects.Add(t,o);
+        //}
 
         public override void Load()
         {
@@ -38,8 +37,22 @@ namespace IocExampleNewCLass
             Bind<CommandExecutor>().To<CommandExecutor>();
             Bind<QueryExecutor>().To<QueryExecutor>();
             Bind<UserService>().To<UserService>();
-            Bind<CreateUserHandler>().To<CreateUserHandler>();
+            Bind<CreateUserHandler>().To<CreateUserHandler>();       
+        }
+        public void Register<TService>(Func<TService> factory)
+        {
+            objects.Add(typeof(TService), factory);
+        }
 
+        //public TService Resolve<TService>()
+        //{
+        //    object factory = objects[typeof(TService)];
+        //    return ((Func<TService>)factory).Invoke();
+        //}
+
+        public TService Resolve<TService>()
+        {
+            return Util.GetSingleConstructor(objects[typeof(TService)]);
         }
     }
     ////////////  2 способ   ////////////////////////

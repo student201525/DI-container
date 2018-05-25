@@ -15,7 +15,7 @@ using IocExample.Classes;
 namespace IocExampleNewCLass
 {
     ////////////  2 способ   ////////////////////////
-    public class Dependency_Resolver : NinjectModule
+    public class DependencyResolver : NinjectModule
     {
 
         Dictionary<Type, object> objects = new Dictionary<Type, object>();
@@ -50,10 +50,10 @@ namespace IocExampleNewCLass
         //    return ((Func<TService>)factory).Invoke();
         //}
 
-        public TService Resolve<TService>()
-        {
-            return Util.GetSingleConstructor(objects[typeof(TService)]);
-        }
+//         public TService Resolve<TService>()
+//         {
+//             return Util.GetSingleConstructor(objects[typeof(TService)]);
+//         }
     }
     ////////////  2 способ   ////////////////////////
 }
